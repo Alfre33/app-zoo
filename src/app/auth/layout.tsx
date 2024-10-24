@@ -28,10 +28,10 @@ export default function AuthLayout({
               />
             </div>
             <h1 className="text-4xl text-gray-800 font-bold mb-5">
-              App Zoo:
-              {/* <span className="text-2xl mx-auto md:mx-0 text-gray-500">
-                Encuentra tu zoologico mas cercano
-              </span> */}
+              App Zoo: 
+              <span className="text-3xl mx-auto md:mx-0 text-gray-500">
+                 Encuentra tu zoologico mas cercano
+              </span>
             </h1>
           </div>
           <div>

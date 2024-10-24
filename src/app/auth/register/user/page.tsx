@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function RegiterUser() {
   return (
-    <div className="w-full md:w-full lg:w-9/12 mx-auto md:mx-0">
+    <div className="w-full md:w-full lg:w-full mx-auto md:mx-0 min-w-400px lg:px-20">
       <div className="bg-white p-10 flex flex-col w-full shadow-xl rounded-xl">
         <h2 className="text-2xl font-bold text-gray-800 text-left mb-5">
           Crea tu cuenta

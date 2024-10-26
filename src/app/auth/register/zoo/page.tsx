@@ -2,54 +2,38 @@ import Link from "next/link";
 
 export default function RegiterZoo() {
   return (
-    <div className="w-full md:w-full lg:w-full mx-auto md:mx-0 min-w-400px lg:px-20">
-        <div className="bg-white p-10 flex flex-col w-full shadow-xl rounded-xl">
-          <h2 className="text-2xl font-bold text-gray-800 text-left mb-5">
-            Registra tu zoologico
-          </h2>
-          <form action="" className="w-full">
-            <div id="input" className="flex flex-col w-full my-5">
-              <label className="text-gray-500 mb-2">Username</label>
-              <input
-                type="text"
-                id="username"
-                placeholder="Please insert your username"
-                className="appearance-none border-2 border-gray-100 rounded-lg px-4 py-3 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:shadow-lg"
-              />
+    <div className="w-full lg:w-3/5 m-1 ">
+    <form className="w-full bg-white shadow-md p-6">
+        <div className="flex flex-wrap -mx-3 mb-6">
+            <div className="w-full md:w-full px-3 mb-6">
+                <label className="block uppercase tracking-wide text-gray-700 text-sm font-bold mb-2" htmlFor="category_name">Category Name</label>
+                <input className="appearance-none block w-full bg-white text-gray-900 font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none focus:border-[#98c01d]" type="text" name="name" placeholder="Category Name" required />
             </div>
-            <div id="input" className="flex flex-col w-full my-5">
-              <label className="text-gray-500 mb-2">Password</label>
-              <input
-                type="password"
-                id="password"
-                placeholder="Please insert your password"
-                className="appearance-none border-2 border-gray-100 rounded-lg px-4 py-3 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:shadow-lg"
-              />
+            <div className="w-full px-3 mb-6">
+                <textarea  rows={4} className="appearance-none block w-full bg-white text-gray-900 font-medium border border-gray-400 rounded-lg py-3 px-3 leading-tight focus:outline-none focus:border-[#98c01d]"  name="description"  ></textarea>
+            </div>                        
+            
+            
+            <div className="w-full px-3 mb-8">
+                <label className="mx-auto cursor-pointer flex w-full max-w-lg flex-col items-center justify-center rounded-xl border-2 border-dashed border-green-400 bg-white p-6 text-center" htmlFor="dropzone-file">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+
+                <h2 className="mt-4 text-xl font-medium text-gray-700 tracking-wide">Category image</h2>
+
+                <p className="mt-2 text-gray-500 tracking-wide">Upload or drag & drop your file SVG, PNG, JPG or GIF. </p>
+
+                <input id="dropzone-file" type="file" className="hidden" name="category_image" accept="image/png, image/jpeg, image/webp"/>
+                </label>
             </div>
-            <div id="button" className="flex flex-col w-full my-5">
-            <button
-                type="button"
-                className="w-full py-4 bg-green-600 rounded-lg text-green-100 font-bold"
-              >
-                Sigin
-              </button>
-              <div className="flex justify-evenly mt-5">
-              <Link
-                href="/auth/register/user"
-                className="w-full text-center text-green-600 font-medium underline"
-              >
-                Registrarse
-              </Link>
-              <Link
-                href="/auth"
-                className="w-full text-center text-green-600 font-medium underline"
-              >
-                Iniciar sesión
-              </Link>
-              </div>
+            
+            <div className="w-full md:w-full px-3 mb-6">
+                <button className="appearance-none block w-full bg-green-700 text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-green-600 focus:outline-none focus:bg-white focus:border-gray-500"
+                >Add Category</button>
             </div>
-          </form>
         </div>
-      </div>
+    </form>
+</div>
   )
 }

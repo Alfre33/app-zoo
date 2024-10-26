@@ -1,55 +1,41 @@
 import Link from "next/link";
+import logo from '../../../../assets/logoApp.png'
+import Image from 'next/image';
+
 
 export default function RegiterUser() {
   return (
-    <div className="w-full md:w-full lg:w-full mx-auto md:mx-0 min-w-400px lg:px-20">
-      <div className="bg-white p-10 flex flex-col w-full shadow-xl rounded-xl">
-        <h2 className="text-2xl font-bold text-gray-800 text-left mb-5">
-          Crea tu cuenta
-        </h2>
-        <form action="" className="w-full">
-          <div id="input" className="flex flex-col w-full my-5">
-            <label className="text-gray-500 mb-2">Username</label>
-            <input
-              type="text"
-              id="username"
-              placeholder="Please insert your username"
-              className="appearance-none border-2 border-gray-100 rounded-lg px-4 py-3 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:shadow-lg"
-            />
-          </div>
-          <div id="input" className="flex flex-col w-full my-5">
-            <label className="text-gray-500 mb-2">Password</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Please insert your password"
-              className="appearance-none border-2 border-gray-100 rounded-lg px-4 py-3 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:shadow-lg"
-            />
-          </div>
-          <div id="button" className="flex flex-col w-full my-5">
-          <button
-                type="button"
-                className="w-full py-4 bg-green-600 rounded-lg text-green-100 font-bold"
-              >
-                Sigin
-              </button>
-            <div className="flex justify-evenly mt-5">
-              <Link
-                href="/auth/register/zoo"
-                className="w-full text-center text-green-600 font-medium underline"
-              >
-                Registrar zoo
-              </Link>
-              <Link
-                href="/auth"
-                className="w-full text-center text-green-600 font-medium underline"
-              >
-                Iniciar sesión
-              </Link>
-            </div>
-          </div>
-        </form>
-      </div>
+    <div className="lg:w-1/2 w-full flex items-center justify-center text-center md:px-16 px-0 z-0 min-h-screen" style={{backgroundColor: "#161616"}}>
+    <div className="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center" style={{backgroundImage: "url(https://images.unsplash.com/photo-1577495508048-b635879837f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80)"}}>
+        <div className="absolute bg-black opacity-60 inset-0 z-0"></div>
     </div>
+    <div className="w-full py-6 z-20">
+        <h1 className="my-6">
+       <Image alt="zoo" src={logo} width={150} height={100} className=" inline-flex" />
+        </h1>
+        <div className="py-6 space-x-2">
+            <span className="w-10 h-10 items-center justify-center inline-flex rounded-full font-bold text-lg border-2 border-white">f</span>
+            <span className="w-10 h-10 items-center justify-center inline-flex rounded-full font-bold text-lg border-2 border-white">in</span>
+        </div>
+        <p className="text-gray-100">
+            or use email your account
+        </p>
+        <form action="" className="sm:w-2/3 w-full px-4 lg:px-0 mx-auto">
+            <div className="pb-2 pt-4">
+                <input type="email" name="email" id="email" placeholder="Email" className="block w-full p-4 text-lg rounded-lg bg-black"/>
+            </div>
+            <div className="pb-2 pt-4">
+                <input className="block w-full p-4 text-lg rounded-lg bg-black" type="password" name="password" id="password" placeholder="Password"/>
+            </div>
+            <div className="flex justify-between text-gray-400 px-4">
+                <Link className="hover:underline hover:text-gray-100" href="/auth/register/zoo">Registrar Zoo</Link>
+                <Link className="hover:underline hover:text-gray-100" href="/auth">Iniciar sesión</Link>
+            </div>
+            <div className="px-4 pb-2 pt-4">
+                <button className="uppercase block w-full p-4 text-lg rounded-full bg-green-primary-400 hover:bg-green-primary-500 focus:outline-none">sign in</button>
+            </div>
+        </form>
+    </div>
+</div>
   );
 }

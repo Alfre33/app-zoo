@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function JoinZoo() {
   return (
-    <div className="px- md:lg:xl:px-10 border-t border-b  bg-opacity-10">
+    <div className=" md:lg:xl:px-10 border-t border-b  bg-opacity-10">
             <div className="grid grid-cols-1 md:lg:xl:grid-cols-3 group bg-white shadow-xl shadow-neutral-100 border ">
     
                 <div className="p-10 flex flex-col items-center text-center group     hover:bg-slate-50 cursor-pointer">
@@ -19,9 +19,9 @@ export default function JoinZoo() {
                 </div>
             </div>
     
-            <div className="w-full   bg-green-primary-500 shadow-xl shadow-green-200 py-10 px-20 flex justify-between items-center">
+            <div className="w-full bg-green-primary-500 shadow-xl shadow-green-200 py-10 px-20 flex justify-around items-center sm:px-5">
                 <p className=" text-white"> <span className="text-4xl font-medium">Still Confused ?</span> <br/> <span className="text-lg">Book For Free Career Consultation Today ! </span></p>
-                <Link href="/auth/register/zoo" className="px-5 py-3  font-medium text-white shadow-xl  hover:bg-green-700 duration-150  bg-green-500 capitalize rounded-md">Unetenos ahora !!</Link>
+                <Link href="/auth/register/zoo" className="ml-5 px-5 py-3  font-medium text-white shadow-xl  hover:bg-green-700 duration-150  bg-green-500 capitalize rounded-md ">Unetenos ahora</Link>
             </div>
         </div>
   )

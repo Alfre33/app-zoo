@@ -7,6 +7,7 @@ const config: Config = {
     "./src/components/home/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/adminzoo/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/adminapp/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {

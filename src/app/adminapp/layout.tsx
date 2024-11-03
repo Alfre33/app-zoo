@@ -21,12 +21,12 @@ export default function AdminZooLayout({
     {
         path:'/adminapp/control',
         icon: <AiTwotoneControl size={30}/>,
-        title: 'Dashboard',
+        title: 'Control',
     },
     {
         path:'/adminapp/Profile',
         icon: <IoPersonOutline  size={30}/>,
-        title: 'Dashboard',
+        title: 'Perfil',
     },
   ]
   

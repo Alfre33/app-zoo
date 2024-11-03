@@ -39,7 +39,6 @@ export default function PreviewZoo() {
     },
   ];
 
-  const cardWidthPercentage = 100; // Ancho completo en pantallas pequeñas
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
